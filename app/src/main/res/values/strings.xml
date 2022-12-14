@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">CourseHandicap</string>
+    <string name="handicapIndex">Показатель гандикапа</string>
+    <string name="slopeRating">Рейтинг сложности</string>
+    <string name="courseRating">Рейтинг поля</string>
+    <string name="par">Пар</string>
+    <string name="number_of_holes">Количество лунок:</string>
+    <string name="nine_holes">9 лунок</string>
+    <string name="eighteen_holes">18 лунок</string>
+    <string name="calculate_for_holes">Рассчитать показатель гандикапа для:</string>
+    <string name="course_rating_and_par">Рейтинг поля и пар:</string>
+    <string name="use_course_rating_and_par">Использовать в подсчёте</string>
+    <string name="no_use_course_rating_and_par">Исключить из подсчёта</string>
+    <string name="calculate">Рассчитать</string>
+    <string name="calculate_course_handicap">Расчёт полевого гандикапа</string>
+    <string name="result_course_handicap">Результат расчета:</string>
+    <string name="result_unrounded"/>
+    <string name="result_rounded"/>
+    <string name="rounded">Округленный</string>
+    <string name="unrounded">Неогругленный</string>
+    <string name="handicapIndexError">Показатель от -10.0 до 54.0</string>
+    <string name="slopeRatingError">Рейтинг от 55 до 155</string>
+    <string name="courseRatingNineError">Показатель от 25.0 до 43.0</string>
+    <string name="courseRatingEighteenError">Показатель от 50.0 до 86.0</string>
+    <string name="parNineError">Показатель от 25 до 45</string>
+    <string name="parEighteenError">Показатель от 50 до 85</string>
+    <string name="notCheckedError">Выберите лунки</string>
+</resources>

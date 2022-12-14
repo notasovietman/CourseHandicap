@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.coursehandicap.ui.fragment.CourseHandicapCalculationFragment">
+
+    <TextView
+        android:id="@+id/course_handicap_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:text="@string/calculate_course_handicap"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_24"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/radio_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_handicap_text_view">
+
+        <TextView
+            android:id="@+id/number_of_holes_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_8"
+            android:text="@string/number_of_holes"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/number_of_holes_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/nine_holes_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/button_tint"
+                android:paddingEnd="@dimen/padding_16"
+                android:tag="nine"
+                android:text="@string/nine_holes" />
+
+            <RadioButton
+                android:id="@+id/eighteen_holes_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/button_tint"
+                android:paddingEnd="@dimen/padding_16"
+                android:tag="eighteen"
+                android:text="@string/eighteen_holes" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/handicap_index_text_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/handicapIndex"
+        app:boxStrokeColor="@color/button_tint"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/button_tint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_button_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/handicap_index_edit_text"
+            android:layout_width="@dimen/text_input_size"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingStart="@dimen/padding_16"
+            android:textSize="@dimen/text_size_14" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/slope_rating_text_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/slopeRating"
+        app:boxStrokeColor="@color/button_tint"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/button_tint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handicap_index_text_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/slope_rating_edit_text"
+            android:layout_width="@dimen/text_input_size"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:paddingStart="@dimen/padding_16"
+            android:textSize="@dimen/text_size_14" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/course_rating_text_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/courseRating"
+        app:boxStrokeColor="@color/button_tint"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/button_tint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slope_rating_text_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/course_rating_edit_text"
+            android:layout_width="@dimen/text_input_size"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingStart="@dimen/padding_16"
+            android:textSize="@dimen/text_size_14" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/par_text_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/par"
+        app:boxStrokeColor="@color/button_tint"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/button_tint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_rating_text_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/par_edit_text"
+            android:layout_width="@dimen/text_input_size"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:paddingStart="@dimen/padding_16"
+            android:textSize="@dimen/text_size_14" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:backgroundTint="@color/button_tint"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/par_text_input" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

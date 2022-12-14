@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/courseHandicapCalculationFragment">
+
+    <fragment
+        android:id="@+id/courseHandicapCalculationFragment"
+        android:name="com.example.coursehandicap.ui.fragment.CourseHandicapCalculationFragment"
+        android:label="CourseHandicapCalculationFragment"
+        tools:layout="@layout/fragment_course_handicap_calculation">
+        <action
+            android:id="@+id/action_courseHandicapCalculationFragment_to_courseHandicapResultsFragment"
+            app:destination="@id/courseHandicapResultsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseHandicapResultsFragment"
+        android:name="com.example.coursehandicap.ui.fragment.CourseHandicapResultsFragment"
+        android:label="CourseHandicapResultsFragment"
+        tools:layout="@layout/fragment_course_handicap_results">
+        <argument
+            android:name="roundedResult"
+            app:argType="integer" />
+        <argument
+            android:name="unroundedResult"
+            app:argType="float" />
+    </fragment>
+
+</navigation>
